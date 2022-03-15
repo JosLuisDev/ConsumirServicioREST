@@ -1,0 +1,17 @@
+Para consumier un servicio RESTFul necesitaremos crear los dominios es decir clases de java que simbolicen
+la data en formato JSON que el servicio regresara al consumirlo  por ejemplo en este caso el servicio regresa:
+{
+   type: "success",
+   value: {
+      id: 10,
+      quote: "Really loving Spring Boot, makes stand alone Spring apps easy."
+   }
+}
+
+por lo cual creamos la clase Quote y Value las cuales tiene sus metodos getter y setter y la sobreescritura del
+metodo toString cada una con sus atributos por ejemplo Quote tiene String type y Value value.
+La clase Value contiene los atributos Long id y String quote
+
+Por ultimo lo que necesitaremos es un logger para mostrar la informacion en consola
+La clase RestTemplate para procesar la dara que regresa el servicio que consumimos
+La clase CommandLineRunner que corre la clase RestTemplate y eso hara que podamos recuperar la data
